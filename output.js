@@ -1,4 +1,4 @@
-//Thu Jul 04 2024 08:53:30 GMT+0000 (Coordinated Universal Time)
+//Thu Jul 04 2024 09:09:58 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 const axios = require("axios");
@@ -14,7 +14,7 @@ function signIn(_0x302a05, _0x4c9627) {
       "Sec-Fetch-Dest": "empty",
       "Sec-Fetch-Mode": "cors",
       "Sec-Fetch-Site": "cross-site",
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090b11)XWEB/9185",
+      "User-Agent": "Mozilla/5.0 (Linux; Android 14; 23116PN5BC Build/UKQ1.230804.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/122.0.6261.120 Mobile Safari/537.36 XWEB/1220099 MMWEBSDK/20240404 MMWEBID/2445 MicroMessenger/8.0.49.2600(0x28003133) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android",
       "xweb_xhr": "1"
     },
     _0x21e218 = {
@@ -29,7 +29,9 @@ function signIn(_0x302a05, _0x4c9627) {
   return axios.post("https://www.kugua.com/wxapp/inflatedv3/popUpRedEnvelopes", _0x21e218, {
     "headers": _0x1f25d1
   }).then(_0x197bc2 => {
-    return console.log("签到成功"), console.log(_0x197bc2.data), _0x197bc2.data.data.dialogId;
+    console.log("签到成功");
+    console.log(_0x197bc2.data);
+    return _0x197bc2.data.data.dialogId;
   }).catch(_0x498753 => {
     console.error("签到失败", _0x498753);
     throw _0x498753;
@@ -47,7 +49,7 @@ function withdraw(_0x3cb46e, _0x2e8f6f, _0x41b900) {
       "Sec-Fetch-Dest": "empty",
       "Sec-Fetch-Mode": "cors",
       "Sec-Fetch-Site": "cross-site",
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309092b) XWEB/8555",
+      "User-Agent": "Mozilla/5.0 (Linux; Android 14; 23116PN5BC Build/UKQ1.230804.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/122.0.6261.120 Mobile Safari/537.36 XWEB/1220099 MMWEBSDK/20240404 MMWEBID/2445 MicroMessenger/8.0.49.2600(0x28003133) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android",
       "xweb_xhr": "1"
     },
     _0x33fce6 = {
@@ -77,7 +79,7 @@ function getToken(_0x55a62e) {
       "Sec-Fetch-Dest": "empty",
       "Sec-Fetch-Mode": "cors",
       "Sec-Fetch-Site": "cross-site",
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090b11)XWEB/9185",
+      "User-Agent": "Mozilla/5.0 (Linux; Android 14; 23116PN5BC Build/UKQ1.230804.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/122.0.6261.120 Mobile Safari/537.36 XWEB/1220099 MMWEBSDK/20240404 MMWEBID/2445 MicroMessenger/8.0.49.2600(0x28003133) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android",
       "xweb_xhr": "1"
     },
     _0x5c49d2 = {
@@ -86,7 +88,8 @@ function getToken(_0x55a62e) {
   return axios.post("https://www.kugua.com/wxapp/refreshToken", _0x5c49d2, {
     "headers": _0x28fdb6
   }).then(_0x381c1f => {
-    return console.log(_0x381c1f.data), _0x381c1f.data.data.token;
+    console.log(_0x381c1f.data);
+    return _0x381c1f.data.data.token;
   }).catch(_0x34c5eb => {
     console.error("获取token失败", _0x34c5eb);
     throw _0x34c5eb;
